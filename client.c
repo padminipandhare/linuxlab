@@ -44,12 +44,14 @@ int main(int argc, char *argv[])
 
     while(1)
     {
+        //writing message to a server
         bzero(buffer,256);
         fgets(buffer,255,stdin);
         n = write(sockfd,buffer,strlen(buffer));
         if (n < 0)
              error("ERROR in writing message to socket");
-
+        
+        //reading message to a server
         bzero(buffer,256);
         n = read(sockfd,buffer,255);
         if (n < 0)
