@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
      return 0;
 }
 
-//function for error message
+//function defination for error message
 void error(const char *msg)
 {
     perror(msg);
